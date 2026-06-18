@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin(); loadKanban();">
+
+<div class="sidebar">
+  <h2>Agile Tool</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="team.html">Team Management</a>
+  <a href="sprint.html">Sprint Planning</a>
+  <a href="kanban.html">Task Board</a>
+  <a href="analytics.html">Analytics</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content">
+  <h2>Task Board (Kanban)</h2>
+
+  <div class="kanban">
+    <div class="column" ondrop="drop(event,'To Do')" ondragover="allowDrop(event)">
+      <h3>To Do</h3>
+      <div id="todo"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event,'In Progress')" ondragover="allowDrop(event)">
+      <h3>In Progress</h3>
+      <div id="progress"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event,'Done')" ondragover="allowDrop(event)">
+      <h3>Done</h3>
+      <div id="done"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
