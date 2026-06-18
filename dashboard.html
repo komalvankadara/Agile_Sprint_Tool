@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin(); loadActiveSprint();">
+
+<div class="sidebar">
+  <h2>Agile Tool</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="team.html">Team Management</a>
+  <a href="sprint.html">Sprint Planning</a>
+  <a href="kanban.html">Task Board</a>
+  <a href="analytics.html">Analytics</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content">
+  <h2>Dashboard</h2>
+
+  <div class="card">
+    <h3>Active Sprint</h3>
+    <p id="activeSprint">No Sprint Created</p>
+  </div>
+
+  <div class="card">
+    <h3>Modules</h3>
+    <ul>
+      <li>Team Management</li>
+      <li>Create Sprint + Sprint History</li>
+      <li>Add Task + Assign to Member</li>
+      <li>Kanban Board (Drag & Drop)</li>
+      <li>Analytics (Charts + Member Performance)</li>
+    </ul>
+  </div>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
