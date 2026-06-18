@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analytics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin(); loadAnalytics();">
+
+<div class="sidebar">
+  <h2>Agile Tool</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="team.html">Team Management</a>
+  <a href="sprint.html">Sprint Planning</a>
+  <a href="kanban.html">Task Board</a>
+  <a href="analytics.html">Analytics</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content">
+  <h2>Analytics Dashboard</h2>
+
+  <div class="card">
+    <h3>Task Status Summary</h3>
+    <p>To Do Tasks: <b id="todoCount"></b></p>
+    <p>In Progress Tasks: <b id="progressCount"></b></p>
+    <p>Done Tasks: <b id="doneCount"></b></p>
+  </div>
+
+  <div class="card">
+    <h3>Team Member Performance</h3>
+    <table border="1" width="100%" cellpadding="8" style="border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th>Member Name</th>
+          <th>Total Tasks</th>
+          <th>To Do</th>
+          <th>In Progress</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody id="memberPerformance"></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Member Performance Bar Chart (Done Tasks)</h3>
+    <canvas id="performanceChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h3>Burndown Chart</h3>
+    <canvas id="burndownChart"></canvas>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
