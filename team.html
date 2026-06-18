@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin(); loadTeamData();">
+
+<div class="sidebar">
+  <h2>Agile Tool</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="team.html">Team Management</a>
+  <a href="sprint.html">Sprint Planning</a>
+  <a href="kanban.html">Task Board</a>
+  <a href="analytics.html">Analytics</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content">
+  <h2>Team Management</h2>
+
+  <div class="card">
+    <h3>Set Team Leader</h3>
+    <input type="text" id="leaderName" placeholder="Enter Team Leader Name">
+    <button onclick="setTeamLeader()">Save Leader</button>
+
+    <p><b>Current Leader:</b> <span id="currentLeader">Not Set</span></p>
+
+    <button onclick="editTeamLeader()">Edit Leader</button>
+    <button style="background:red;color:white;" onclick="deleteTeamLeader()">Delete Leader</button>
+  </div>
+
+  <div class="card">
+    <h3>Add Team Member</h3>
+    <input type="text" id="memberName" placeholder="Enter Member Name">
+    <button onclick="addTeamMember()">Add Member</button>
+  </div>
+
+  <div class="card">
+    <h3>Team Members List</h3>
+    <ul id="memberList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
