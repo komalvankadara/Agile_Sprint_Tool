@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sprint Planning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin(); loadSprintHistory(); displayTasks(); loadTeamMembersDropdown();">
+
+<div class="sidebar">
+  <h2>Agile Tool</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="team.html">Team Management</a>
+  <a href="sprint.html">Sprint Planning</a>
+  <a href="kanban.html">Task Board</a>
+  <a href="analytics.html">Analytics</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content">
+  <h2>Sprint Planning</h2>
+
+  <div class="card">
+    <h3>Create Sprint</h3>
+    <input type="text" id="sprintName" placeholder="Sprint Name">
+    <input type="date" id="startDate">
+    <input type="date" id="endDate">
+    <button onclick="createSprint()">Create Sprint</button>
+  </div>
+
+  <div class="card">
+    <h3>Sprint History</h3>
+    <ul id="sprintHistory"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Add Task (Active Sprint)</h3>
+    <input type="text" id="taskName" placeholder="Task Name">
+
+    <select id="assignedTo">
+      <option value="">-- Assign To --</option>
+    </select>
+
+    <button onclick="addTask()">Add Task</button>
+
+    <h4>Task List</h4>
+    <ul id="taskList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
