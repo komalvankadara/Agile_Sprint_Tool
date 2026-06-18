@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #1e293b;
+  position: fixed;
+  padding-top: 20px;
+}
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #334155;
+}
+
+/* Main Content */
+.content {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+.form-box {
+  width: 400px;
+  margin: 120px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+input, select {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid gray;
+}
+
+button {
+  padding: 10px 15px;
+  background: #facc15;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #eab308;
+}
+
+.logout-btn {
+  background: red;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: darkred;
+}
+
+/* Kanban Board */
+.kanban {
+  display: flex;
+  gap: 15px;
+}
+
+.column {
+  flex: 1;
+  background: #e2e8f0;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 350px;
+}
+
+.column h3 {
+  text-align: center;
+}
+
+.task {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: grab;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Chart */
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
